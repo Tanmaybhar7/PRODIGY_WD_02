@@ -1,4 +1,4 @@
-/* Dark mode colors and backgrounds */
+
 .dark {
   color: #f3f4f6 !important;
 }
@@ -20,12 +20,11 @@ body.dark {
   background-color: #4b5563 !important;
 }
 
-/* Button icons spacing */
 button i {
   margin-right: 0.5rem;
 }
 
-/* Fade-in animation */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -35,7 +34,7 @@ button i {
   animation: fadeIn 0.8s ease-out;
 }
 
-/* Smooth color and background transitions */
+
 body {
   transition: background 0.5s ease;
 }
@@ -44,7 +43,7 @@ body {
   transition: color 0.4s ease, background-color 0.4s ease;
 }
 
-/* Optional scrollbar styling */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
