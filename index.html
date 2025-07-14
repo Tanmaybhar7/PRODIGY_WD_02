@@ -13,8 +13,6 @@
 <body id="body" class="bg-gray-100 dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 font-['Roboto'] flex items-center justify-center min-h-screen transition-colors duration-300">
 
   <div class="bg-white dark:bg-slate-800 shadow-xl rounded-2xl p-8 w-full max-w-md text-center text-gray-800 dark:text-white transition-colors duration-300">
-
-    <!-- Stopwatch Icon + Title + Creator Info -->
     <div class="mb-6 text-center animate-fadeIn transition-colors">
       <i class="fas fa-stopwatch fa-3x text-gray-700 dark:text-white mb-3 transition-colors duration-300"></i>
       <h1 class="text-3xl font-bold text-gray-800 dark:text-white transition-colors duration-300">Stopwatch App</h1>
@@ -32,11 +30,8 @@
         <p class="text-xs text-gray-500 dark:text-gray-300 mt-1 transition-colors duration-300">WEB DEVELOPER</p>
       </div>
     </div>
-
-    <!-- Stopwatch Display -->
     <div id="display" class="text-5xl font-mono text-gray-800 dark:text-white mb-6 transition-colors">00:00:00.000</div>
 
-    <!-- Buttons -->
     <div class="flex justify-center flex-wrap gap-4 mb-4">
       <button id="startBtn" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-xl transition"><i class="fas fa-play mr-2"></i>Start</button>
       <button id="pauseBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-xl transition hidden"><i class="fas fa-pause mr-2"></i>Pause</button>
@@ -44,7 +39,6 @@
       <button id="lapBtn" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-xl transition"><i class="fas fa-flag mr-2"></i>Lap</button>
     </div>
 
-    <!-- Theme Toggle + Export -->
     <div class="flex justify-between mt-4 gap-4">
       <button id="toggleDark" title="Toggle Theme" class="text-2xl text-gray-600 dark:text-white transition hover:scale-110">
         <i id="themeIcon" class="fas fa-moon"></i>
@@ -53,10 +47,8 @@
         <i class="fas fa-file-export mr-2"></i>Export
       </button>
     </div>
-
-    <!-- Lap List -->
     <ul id="laps" class="text-left max-h-48 overflow-y-auto mt-6 space-y-2">
-      <!-- Lap entries will appear here -->
+   
     </ul>
   </div>
 
