@@ -13,7 +13,6 @@ const laps = document.getElementById('laps');
 const body = document.getElementById('body');
 const themeIcon = document.getElementById('themeIcon');
 
-// Format time to hh:mm:ss.mmm
 function formatTime(ms) {
   const totalSeconds = Math.floor(ms / 1000);
   const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
@@ -23,7 +22,6 @@ function formatTime(ms) {
   return `${hours}:${minutes}:${seconds}.${milliseconds}`;
 }
 
-// Start the stopwatch
 function startTimer() {
   startTime = Date.now() - elapsedTime;
   timerInterval = setInterval(() => {
@@ -35,14 +33,13 @@ function startTimer() {
   pauseBtn.classList.remove('hidden');
 }
 
-// Pause the stopwatch
 function pauseTimer() {
   clearInterval(timerInterval);
   startBtn.classList.remove('hidden');
   pauseBtn.classList.add('hidden');
 }
 
-// Reset everything
+
 function resetTimer() {
   clearInterval(timerInterval);
   elapsedTime = 0;
@@ -53,7 +50,7 @@ function resetTimer() {
   localStorage.removeItem('lapTimes');
 }
 
-// Record current lap
+
 function recordLap() {
   if (elapsedTime === 0) return;
 
@@ -66,7 +63,6 @@ function recordLap() {
   saveLapToLocalStorage(lapItem.textContent);
 }
 
-// Export laps to .txt
 function exportLapTimes() {
   let data = "";
   laps.querySelectorAll('li').forEach(li => {
@@ -80,14 +76,12 @@ function exportLapTimes() {
   a.click();
 }
 
-// Save lap to localStorage
 function saveLapToLocalStorage(lapText) {
   const saved = JSON.parse(localStorage.getItem('lapTimes')) || [];
   saved.unshift(lapText);
   localStorage.setItem('lapTimes', JSON.stringify(saved));
 }
 
-// Load laps from storage
 function loadLapFromStorage() {
   const saved = JSON.parse(localStorage.getItem('lapTimes')) || [];
   saved.forEach(lap => {
@@ -98,7 +92,6 @@ function loadLapFromStorage() {
   });
 }
 
-// Set dark/light theme
 function setTheme(isDark) {
   if (isDark) {
     body.classList.add('dark');
@@ -111,20 +104,17 @@ function setTheme(isDark) {
   }
 }
 
-// Toggle theme manually
 function toggleDarkMode() {
   const isDark = body.classList.contains('dark');
   setTheme(!isDark);
 }
 
-// Load theme and laps on page load
 window.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   setTheme(savedTheme === 'dark');
   loadLapFromStorage();
 });
 
-// Event Listeners
 startBtn.addEventListener('click', startTimer);
 pauseBtn.addEventListener('click', pauseTimer);
 resetBtn.addEventListener('click', resetTimer);
