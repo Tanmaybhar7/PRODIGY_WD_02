@@ -1,0 +1,54 @@
+/* Dark mode colors and backgrounds */
+.dark {
+  color: #f3f4f6 !important;
+}
+
+
+body.dark {
+  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+}
+
+.dark #display {
+  color: #f3f4f6;
+}
+
+.dark .bg-white {
+  background-color: #374151 !important;
+}
+
+.dark li {
+  background-color: #4b5563 !important;
+}
+
+/* Button icons spacing */
+button i {
+  margin-right: 0.5rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Smooth color and background transitions */
+body {
+  transition: background 0.5s ease;
+}
+
+.transition-colors {
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+/* Optional scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
